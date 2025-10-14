@@ -8,6 +8,13 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { toast } from "sonner";
 
+/**
+ * Render a centered input and submit button that creates a new project from the input value and navigates to the created project's page.
+ *
+ * The Submit button triggers a project-creation mutation; on success the page navigates to `/projects/{id}`, and on error an error toast is shown.
+ *
+ * @returns The React element for the home UI containing the input and submit button
+ */
 export default  function Home() {
   const [value, setValue] = useState("");
   const router = useRouter();
