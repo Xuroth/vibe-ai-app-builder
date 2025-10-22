@@ -22,9 +22,10 @@ export const MessagesContainer = ({ projectId, activeFragment, setActiveFragment
   }));
 
   useEffect(() => {
-    const lastAssistantMessageWithFragment = messages.findLast(
-      (mssage) => mssage.role === "ASSISTANT" && !!mssage.fragment
-    )
+    const lastAssistantMessageWithFragment =
+      (messages as typeof messages).findLast?.(m => m.role === "ASSISTANT" && !!m.fragment) ??
+      [...messages].reverse().find(m => m.role === "ASSISTANT" && !!m.fragment);
+      
     if (
       lastAssistantMessageWithFragment &&
       lastAssistantMessageWithFragment.id !== lastAssistantMessageRef.current
