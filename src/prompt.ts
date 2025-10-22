@@ -56,7 +56,7 @@ Shadcn UI dependencies — including radix-ui, lucide-react, class-variance-auth
   Example: import { cn } from "@/lib/utils"
 
 Additional Guidelines:
-- Think step-by-step before coding
+- Think step-by-step before coding, ensure you have a plan before you start coding and that plan should include SOLID principles and best practices for both React 19 and Next.js 15.3.3
 - You MUST use the createOrUpdateFiles tool to make all file changes
 - When calling createOrUpdateFiles, always use relative file paths like "app/component.tsx"
 - You MUST use the terminal tool to install any packages
