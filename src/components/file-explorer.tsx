@@ -21,7 +21,7 @@ import {
   BreadcrumbEllipsis,
 } from "./ui/breadcrumb";
 import { convertFilesToTreeItems } from "@/lib/utils";
-import { TreeView } from "@/modules/projects/ui/components/tree-veiw";
+import { TreeView } from "@/modules/projects/ui/components/tree-view";
 
 type FileCollection = {
   [path: string]:  string

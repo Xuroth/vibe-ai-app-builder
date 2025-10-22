@@ -17,28 +17,23 @@ export function convertFilesToTreeItems(
 
 
   }
-  console.log("files", files);
+  
   const tree: TreeNode = {};
   const sortedPaths = Object.keys(files).sort();
   
   for (const filePath of sortedPaths) {
     const parts = filePath.split('/');
-    console.log("parts", parts);
     let current = tree;
     for (let i = 0; i < parts.length - 1; i++) {
       const part = parts[i];
-      console.log("part", part);
       if (!current[part]) {
-        console.log("current[part]", current[part]);
         current[part] = {};
       }
-      console.log("current[part]", part, current[part]);
       current = current[part]
     }
 
     const fileName = parts[parts.length - 1];
     current[fileName] = null;
-    console.log("current", current);
   }
 
   function convertNode(node: TreeNode, name?: string): TreeItem[] | TreeItem {
