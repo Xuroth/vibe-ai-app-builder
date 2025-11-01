@@ -22,6 +22,8 @@ model Project {
   userId String
 
   messages Message[]
+
+  @@index([userId])
 }
 
 enum MessageRole {
@@ -60,4 +62,8 @@ model Fragment {
   updatedAt DateTime @updatedAt
 }
 
-
+model Usage {
+  key String @id
+  points Int
+  expire DateTime?
+}
