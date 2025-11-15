@@ -1,4 +1,4 @@
-import { Skeleton } from "@/components/ui/skeleton";
+// import { Skeleton } from "@/components/ui/skeleton";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 
